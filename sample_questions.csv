@@ -1,0 +1,7 @@
+quiz_type,question,choice_a,choice_b,choice_c,choice_d,answer_keys,explanation,tags,difficulty
+CP,"What does S3 stand for?","Simple Storage Service","Simple Secure Storage","Secure Storage Service","Simple System Storage","A","S3 = Simple Storage Service","storage|s3",easy
+SAA,"Which are serverless services?","EC2","Lambda","DynamoDB","RDS","B|C","Lambda + DynamoDB are serverless","lambda|dynamodb",medium
+DVA,"Which service would you use to run serverless code?","EC2","Lambda","ECS","EKS","B","Lambda runs serverless functions","lambda|compute",easy
+CP,"Which of the following improve cost optimization?","Reserved Instances","On-demand Instances","Spot Instances","Dedicated Hosts","A|C","Reserved and Spot can lower cost","cost",medium
+
+
