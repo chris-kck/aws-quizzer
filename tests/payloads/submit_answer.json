@@ -1,0 +1,6 @@
+{
+  "user_id": "U123",
+  "question_id": "q-uuid",
+  "quiz_type": "CP",
+  "choice_ids": ["B"]
+}
