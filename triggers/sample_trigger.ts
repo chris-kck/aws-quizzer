@@ -7,7 +7,7 @@ import SampleWorkflow from "../workflows/sample_workflow.ts";
  * such as a user pressing a button or when a specific event occurs.
  * https://api.slack.com/automation/triggers
  */
-const sampleTrigger: Trigger<typeof SampleWorkflow.definition> = {
+export const sampleTrigger: Trigger<typeof SampleWorkflow.definition> = {
   type: TriggerTypes.Shortcut,
   name: "Sample trigger",
   description: "A sample trigger",

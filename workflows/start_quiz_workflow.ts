@@ -16,15 +16,14 @@ const StartQuizWorkflow = DefineWorkflow({
   },
 });
 
-const next = StartQuizWorkflow.addStep(GetNextQuestion, {
-  user_id: StartQuizWorkflow.inputs.user_id,
-  quiz_type: StartQuizWorkflow.inputs.quiz_type,
-});
+// Step 1 must be a Slack-native interactivity producer like OpenForm or a custom function that uses interactivity
+// We directly open the modal with OpenQuestionModal, letting it fetch a question if not provided
 
 // Open the question modal using a custom function that maps interactivity from workflow input
 StartQuizWorkflow.addStep(OpenQuestionModal, {
   interactivity: StartQuizWorkflow.inputs.interactivity,
-  question: next.outputs.question,
+  user_id: StartQuizWorkflow.inputs.user_id,
+  quiz_type: StartQuizWorkflow.inputs.quiz_type,
   index: 1,
   total: 1,
 });
