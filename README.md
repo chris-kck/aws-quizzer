@@ -2,6 +2,8 @@
 
 A Slack app skeleton for daily quizzes & leaderboards using Slack's Deno SDK. Supports single and multi-answer questions and CSV import.
 
+eg https://docs.slack.dev/tools/deno-slack-sdk/tutorials/virtual-running-buddies-app/#datastore
+
 ## Quick Start (dev)
 1. Install Slack CLI (follow Slack docs) and Deno (https://deno.land).
 2. `slack login`
