@@ -4,16 +4,18 @@
  * quiz_type,question,choice_a,choice_b,choice_c,choice_d,answer_keys,explanation,tags,difficulty
  * - answer_keys supports multi-answers using pipe e.g. B|C
  */
-import { SlackFunction } from "deno-slack-sdk/mod.ts";
+import { DefineFunction, SlackFunction } from "deno-slack-sdk/mod.ts";
 import { Question } from "../datastores/question.ts";
 // Use Deno std CSV parser
 import { parse } from "https://deno.land/std@0.196.0/csv/mod.ts";
 
-export default SlackFunction({
+export const ImportQuestions = DefineFunction({
   callback_id: "import_questions",
   title: "Import Questions (CSV)",
   input_parameters: { properties: { csv: { type: "string" } }, required: ["csv"] },
-}, async ({ inputs, client }) => {
+});
+
+export default SlackFunction(ImportQuestions, async ({ inputs, client }) => {
   const csv = (inputs as any).csv as string;
   const parsed = await parse(csv, { skipFirstRow: false }) as string[][];
   // Expect header on first row
