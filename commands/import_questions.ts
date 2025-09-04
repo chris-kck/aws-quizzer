@@ -12,6 +12,7 @@ import { parse } from "https://deno.land/std@0.196.0/csv/mod.ts";
 export const ImportQuestions = DefineFunction({
   callback_id: "import_questions",
   title: "Import Questions (CSV)",
+  source_file: "commands/import_questions.ts",
   input_parameters: { properties: { csv: { type: "string" } }, required: ["csv"] },
 });
 
